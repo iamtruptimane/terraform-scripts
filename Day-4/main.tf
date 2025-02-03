@@ -1,8 +1,8 @@
 #deploy whole vpc infrastrcture
 terraform {
   backend "s3" {
-    bucket = "terraform-backend-b4-bucket"
-    region = "us-east-2"
+    bucket = "terraform-backend-b5-bucket"
+    region = "us-east-1"
     key = "terraform.tfstate"
   }
 }
@@ -109,7 +109,7 @@ resource "aws_instance" "server1" {
    ]  
 }
 #copy paste and chnage
-/*  
+ 
 resource "aws_instance" "server2" {
   ami = var.image_id 
   instance_type = var.instance_type
@@ -124,5 +124,5 @@ resource "aws_instance" "server2" {
     aws_security_group.sg1
    ]
 }
-*/
+
 
